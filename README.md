@@ -3,7 +3,7 @@ School API Project(s)
 
 # Module 1
 What is an API Assignment? 
-Module 1 Assignment Added: [Click Here](IS690850_DotNetAPI_Project/Module_1_API_Assignment.md)
+Module 1 Assignment Added: [Click Here](/Module_1_API_Assignment.md)
 
 # Module 2
 Added Database Dictionary.pdf and ER Diagram-School.pdf
