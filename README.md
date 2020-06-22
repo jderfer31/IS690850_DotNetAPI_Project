@@ -17,3 +17,6 @@ What is an API Assignment?
 
 # Module 5
 [Module 5 Contracts and LoggerService Folder(s)](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_5)
+
+# Module 6
+[Module 6 Database Model with the Service Repository Pattern](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_6)
