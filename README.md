@@ -6,7 +6,7 @@ What is an API Assignment?
 [Module 1 Assignment](https://github.com/jderfer31/IS690850_DotNetAPI_Project/blob/Module_1/Module_1_API_Assignment.md)
 
 # Module 2
-[Module 2 Database Dictionary](https://github.com/jderfer31/IS690850_DotNetAPI_Project/blob/Module_2/Database%20Dictionary.pdf)
+[Module 2 Database Dictionary](https://github.com/jderfer31/IS690850_DotNetAPI_Project/blob/Module_2/Database%20Dictionary.pdf)\
 [Module 2 ER Diagram-School](https://github.com/jderfer31/IS690850_DotNetAPI_Project/blob/Module_2/ER%20Diagram%20-%20School.pdf)
 
 # Module 3
