@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAPI", "SchoolAPI\SchoolAPI.csproj", "{7BC91EB3-D9FC-44AB-A56A-BB1F8E3AC1A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolAPI", "SchoolAPI\SchoolAPI.csproj", "{7BC91EB3-D9FC-44AB-A56A-BB1F8E3AC1A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{9B7258E6-0312-457C-AC50-4F88E841482F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{9B7258E6-0312-457C-AC50-4F88E841482F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{F92B0E83-7B9E-422E-B189-ED0B8F600C7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{F92B0E83-7B9E-422E-B189-ED0B8F600C7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{964333DD-0EF7-469D-B406-7DA5F04677BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{1317EB61-636E-4058-908E-9175440FB698}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{F92B0E83-7B9E-422E-B189-ED0B8F600C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F92B0E83-7B9E-422E-B189-ED0B8F600C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F92B0E83-7B9E-422E-B189-ED0B8F600C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{964333DD-0EF7-469D-B406-7DA5F04677BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964333DD-0EF7-469D-B406-7DA5F04677BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964333DD-0EF7-469D-B406-7DA5F04677BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964333DD-0EF7-469D-B406-7DA5F04677BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1317EB61-636E-4058-908E-9175440FB698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1317EB61-636E-4058-908E-9175440FB698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1317EB61-636E-4058-908E-9175440FB698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1317EB61-636E-4058-908E-9175440FB698}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
