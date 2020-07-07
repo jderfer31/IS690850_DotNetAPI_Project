@@ -20,3 +20,8 @@ What is an API Assignment?
 
 # Module 6
 [Module 6 Database Model with the Service Repository Pattern](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_6)
+
+# Module 7
+[Module 7 Handling Get Requests](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_7)
+
+
