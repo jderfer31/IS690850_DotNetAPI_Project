@@ -24,4 +24,6 @@ What is an API Assignment?
 # Module 7
 [Module 7 Handling Get Requests](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_7)
 
+# Module 8
+[Module 8 Creational and Destructive Requests](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_8)
 
