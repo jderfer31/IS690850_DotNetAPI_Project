@@ -27,3 +27,5 @@ What is an API Assignment?
 # Module 8
 [Module 8 Creational and Destructive Requests](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_8)
 
+# Module 9
+[Module 9 Creational and Descrtuctive Requestes and Model Validation](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_9)
