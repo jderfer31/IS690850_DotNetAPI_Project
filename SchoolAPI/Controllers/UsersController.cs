@@ -23,141 +23,96 @@ namespace SchoolAPI.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "getAllUsers")]
         public IActionResult GetUsers()
         {
-            try
-            {
-                var users = _repository.User.GetAllUser(trackChanges: false);
-                return Ok(users);
-                /*var UsersDto = _mapper.Map<IEnumerable<UsersDto>>(users)
-                return Ok(UsersDto);*/
+            var user = _repository.User.GetAllUser(trackChanges: false);
 
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something went wrong in the {nameof(GetUsers)} action {ex}");
-                return StatusCode(500, "Internal server error");
-            }
+            var UsersDTO = _mapper.Map<IEnumerable<UsersDTO>>(user);
+            //uncomment the code below to test the global exception handling
+            //throw new Exception("Exception");
+            return Ok(UsersDTO);
         }
-        [HttpGet("{id}")]
+
+        [HttpGet("{id}", Name = "getUsersById")]
         public IActionResult GetUsers(Guid id)
         {
-            try
+            var user = _repository.User.GetUser(id, trackChanges: false); if (user == null)
             {
-                var users = _repository.User.GetUsers(id, trackChanges: false); if (users == null)
-                {
-                    _logger.LogInfo($"User with id: {id} doesn't exist in the database.");
-                    return NotFound();
-                }
-                else
-                {
-                    var UsersDto = _mapper.Map<UsersDTO>(users);
-                    return Ok(UsersDto);
-                }
-
+                _logger.LogInfo($"Users with id: {id} doesn't exist in the database.");
+                return NotFound();
             }
-            catch (Exception ex)
+            else
             {
-                _logger.LogError($"Something went wrong in the {nameof(GetUsers)} action {ex}");
-                return StatusCode(500, "Internal server error");
+                var UsersDTO = _mapper.Map<UsersDTO>(user);
+                return Ok(UsersDTO);
             }
-
-        }
-        
-        [HttpPost(Name = "createUser")]
-public IActionResult CreateUser([FromBody] UserForCreationDto organization)
-{
-    if (organization == null)
-    {
-        _logger.LogError("User ForCreationDto object sent from client is null.");
-        return BadRequestResult("User ForCreationDto object is null");
-    }
-    if (!ModelState.IsValid)
-    {
-        _logger.LogError("Invalid model state for the OrganizationForCreationDto object");
-        return UnprocessableEntity(ModelState);
-    }
-
-    var organizationEntity = _mapper.Map<User>(organization);
-
-    _repository.Organization.CreateUser(organizationEntity);
-    _repository.Save();
-
-    var organizationToReturn = _mapper.Map<UsersDTO>(organizationEntity);
-
-    return CreatedAtRoute("getUserById", new { id = userToReturn.Id }, userToReturn);
-}
-
-        private IActionResult CreatedAtRoute(string v, object p, object userToReturn)
-        {
-            throw new NotImplementedException();
         }
 
-        IActionResult BadRequestResult(string v)
-{
-    throw new NotImplementedException();
-}
-
-IActionResult BadRequest(string v)
-{
-    throw new NotImplementedException();
-}
-
-        [HttpPut("{id}")]
-        public IActionResult UpdateUser(Guid id, [FromBody] UserForUpdateDto user)
+        [HttpPost(Name = "createUsers")]
+        public IActionResult CreateUsers([FromBody] UserForCreationDTO users)
         {
-            if (user == null)
+            if (users == null)
             {
-                _logger.LogError("UserForUpdateDto object sent from client is null.");
-                return BadRequest("UserForUpdateDto object is null");
+                _logger.LogError("Users ForCreationDTO object sent from client is null.");
+                return BadRequest("Users ForCreationDTO object is null");
             }
             if (!ModelState.IsValid)
             {
-                _logger.LogError("Invalid model state for the UserForUpdateDto object");
+                _logger.LogError("Invalid model state for the UsersForCreationDTO object");
                 return UnprocessableEntity(ModelState);
             }
-            var organizationEntity = _repository.User.GetUser(id, trackChanges: true);
-            if (organizationEntity == null)
+
+            var userEntity = _mapper.Map<User>(User);
+
+            _repository.User.CreateUser(userEntity);
+            _repository.Save();
+
+            var userToReturn = _mapper.Map<UsersDTO>(userEntity);
+
+            return CreatedAtRoute("getUserById", new { id = userToReturn.Id }, userToReturn);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateUser(Guid id, [FromBody] UserForUpdateDTO users)
+        {
+            if (User == null)
             {
-                _logger.LogInfo($"User with id: {id} doesn't exist in the database.");
+                _logger.LogError("UserForUpdateDTO object sent from client is null.");
+                return BadRequest("UserForUpdateDTO object is null");
+            }
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the UserForUpdateDTO object");
+                return UnprocessableEntity(ModelState);
+            }
+            var userEntity = _repository.User.GetUser(id, trackChanges: true);
+            if (userEntity == null)
+            {
+                _logger.LogInfo($"Users with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
 
-            _mapper.Map(user, UserEntity);
+            _mapper.Map(User, userEntity);
             _repository.Save();
 
             return NoContent();
         }
 
-        private void UserEntity(IMappingOperationOptions<object, object>)
-        {
-            throw new NotImplementedException();
-        }
-
         [HttpDelete("{id}")]
         public IActionResult DeleteUser(Guid id)
-{
-    var User = _repository.Organization.GetUser(id, trackChanges: false);
-    if (User == null)
-    {
-        _logger.LogInfo($"User with id: {id} doesn't exist in the database.");
-        return NotFound();
-    }
+        {
+            var user = _repository.User.GetUser(id, trackChanges: false);
+            if (user == null)
+            {
+                _logger.LogInfo($"User with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
 
-    _repository.User.DeleteUser(User);
-    _repository.Save();
+            _repository.User.DeleteUser(user);
+            _repository.Save();
 
-    return NoContent();
-}
-    }
-
-    internal interface IMappingOperationOptions<T1, T2, T3>
-    {
-    }
-
-    internal class userToReturn
-    {
-        public static object Id { get; internal set; }
+            return NoContent();
+        }
     }
 }

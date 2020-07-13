@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Entities.DataTransferObjects
 {
-    public class UserForUpdateDto
+    public class UserForUpdateDTO
     {
         [Required(ErrorMessage = "Organization name is a required field.")]
         [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]

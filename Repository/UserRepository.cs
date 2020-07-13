@@ -53,7 +53,7 @@ namespace Repository
             throw new NotImplementedException();
         }
 
-        object IUserRepository.GetUsers(Guid id, bool trackChanges)
+        object IUserRepository.GetUser(Guid id, bool trackChanges)
         {
             throw new NotImplementedException();
         }
