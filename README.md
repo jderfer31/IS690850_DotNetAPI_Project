@@ -29,3 +29,6 @@ What is an API Assignment?
 
 # Module 9
 [Module 9 Creational and Descrtuctive Requestes and Model Validation](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_9)
+
+# Module 10
+[Module 10 Documenting Your API with OpenAPI Spec/Swagger](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_10/SchoolAPI)
