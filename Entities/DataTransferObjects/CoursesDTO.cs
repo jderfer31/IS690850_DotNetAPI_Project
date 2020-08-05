@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.DataTransferObjects
 {
-    public class CourseDto
+    public class CoursesDTO
     {
         public Guid id { get; set; }
         public string CourseName { get; set; }
