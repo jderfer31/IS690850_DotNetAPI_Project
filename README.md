@@ -32,3 +32,10 @@ What is an API Assignment?
 
 # Module 10
 [Module 10 Documenting Your API with OpenAPI Spec/Swagger](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_10/SchoolAPI)
+
+# Final Project
+
+Contributors: Jeremy Langenderfer, Maulik Patel, Jay Patel
+
+# Links to Contributor Branches
+[Module_Final_Jeremy](https://github.com/jderfer31/IS690850_DotNetAPI_Project/tree/Module_Final_Jeremy)
